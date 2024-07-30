@@ -2,3 +2,13 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$fullWidth: 100%;
+
+.full-width{
+    width: $fullWidth;
+}

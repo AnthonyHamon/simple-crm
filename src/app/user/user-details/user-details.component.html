@@ -1,0 +1,41 @@
+<mat-card appearance="outlined">
+    <mat-card-content class="user-details-header">
+
+        <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="userMenu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #userMenu="matMenu">
+            <button mat-menu-item (click)="openUpdateUserDialog()">Edit</button>
+            <button mat-menu-item>Delete</button>
+          </mat-menu>
+
+        <img src="assets/img/user-profil.jpg" alt="">
+        <div>
+            <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+            <span>{{ user.email }}</span>
+        </div>
+
+    </mat-card-content>
+</mat-card>
+
+
+<mat-card class="user-details-info" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Address</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="userAddressMenu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #userAddressMenu="matMenu">
+            <button mat-menu-item (click)="openUpdateUserAdressDialog()">Edit</button>
+          </mat-menu>
+
+        <p>{{ user.address }}
+             <br>
+             {{ user.zipCode }} {{ user.city }}
+        </p>
+    </mat-card-content>
+</mat-card>

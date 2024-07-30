@@ -1,0 +1,38 @@
+.user-details-header{
+    min-height: 250px;
+    display: flex;
+    align-items: flex-end;
+
+    background-color: turquoise;
+
+    >img{
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+    }
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100px;
+        width: 100px;
+        margin-left: 24px;
+        h2{
+            margin: 0;
+        }
+    }
+}
+
+.user-details-info{
+    mat-card-content{
+        margin-top: 8px;
+    }
+}
+
+.pin-right-upper-corner{
+    position: absolute;
+    top: 0;
+    right: 0;
+}

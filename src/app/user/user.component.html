@@ -1,0 +1,28 @@
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <table>
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>E-Mail</th>
+          <th>City</th>
+        </tr>
+        @for (user of getUsers(); track $index) {
+          <tr [routerLink]="'/user/' + user.id">
+            <td >{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{ user.city }}</td>
+          </tr>
+        }
+      </tbody>
+      
+    </table>
+
+  </mat-card-content>
+</mat-card>
+
+<div (click)="openDialog()" class="add-user-button">
+  <button matTooltip="add a user" matTooltipPosition="above" color="primary" mat-fab>
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
